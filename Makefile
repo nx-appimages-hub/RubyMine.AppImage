@@ -1,4 +1,4 @@
-SOURCE="https://download.jetbrains.com/ruby/RubyMine-2019.3.tar.gz"
+SOURCE="https://download-cf.jetbrains.com/ruby/RubyMine-2020.2.1.tar.gz"
 DESTINATION="build.tar.bz2"
 OUTPUT="RubyMine.AppImage"
 
@@ -11,7 +11,7 @@ all:
 	rm -rf AppDir/opt
 
 	mkdir --parents AppDir/opt/application
-	cp -r RubyMine-2019.3/* AppDir/opt/application
+	cp -r RubyMine-*/* AppDir/opt/application
 
 	chmod +x AppDir/AppRun
 	export ARCH=x86_64 && bin/appimagetool.AppImage AppDir $(OUTPUT)
